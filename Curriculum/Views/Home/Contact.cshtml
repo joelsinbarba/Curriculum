@@ -1,17 +1,45 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contactános";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+
+    <form class="form-horizontal">
+        <fieldset>
+            <legend>Contactá con nosotros!</legend>
+            <div class="form-group">
+                <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputApellido" class="col-lg-2 control-label">Apellido</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="textArea" class="col-lg-2 control-label">Mensaje</label>
+                <div class="col-lg-10">
+                    <textarea class="form-control" rows="3" id="textArea"></textarea>
+                    <span class="help-block">Aqui puedes indicarnos cual es tu consulta.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button type="reset" class="btn btn-default">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+    <strong>Soporte:</strong>   <a href="mailto:cvgenerator@hotmail.com">soporte@cvgenerator.com</a><br />
 </address>
