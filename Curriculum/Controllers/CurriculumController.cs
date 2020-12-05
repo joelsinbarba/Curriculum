@@ -20,6 +20,7 @@ namespace CVGenerator.Controllers
             return View(listaCurriculum);
         }
 
+        [Authorize]
         public ActionResult Crear()
         {
             var paises = db.Pais.ToList();
@@ -30,6 +31,7 @@ namespace CVGenerator.Controllers
             return View(); 
         }
 
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Crear(Curriculum curriculum)
@@ -62,7 +64,7 @@ namespace CVGenerator.Controllers
             return View(curriculum);
         }
 
-
+        [Authorize]
         public ActionResult Editar(int? id)
         {
             if (id == null)
@@ -85,6 +87,7 @@ namespace CVGenerator.Controllers
             return View(curriculum);
         }
 
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Editar(Curriculum curriculum)
@@ -101,7 +104,7 @@ namespace CVGenerator.Controllers
             return View(curriculum);
         }
 
-
+        [Authorize]
         public ActionResult Eliminar(int? id)
         {
             if (id == null)
@@ -117,6 +120,7 @@ namespace CVGenerator.Controllers
             return View(curriculum);
         }
 
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Eliminar(int id)
