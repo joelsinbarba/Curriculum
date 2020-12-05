@@ -34,7 +34,7 @@ namespace CVGenerator.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Crear(Curriculum curriculum)
+        public ActionResult Crear(CVGenerator.Models.Curriculum curriculum)
         {
             var paises = db.Pais.ToList();
             Paises = GetAllPaises();
@@ -55,8 +55,8 @@ namespace CVGenerator.Controllers
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
-         
-            Curriculum curriculum = db.Curricula.Find(id);
+
+            CVGenerator.Models.Curriculum curriculum = db.Curricula.Find(id);
             if(curriculum == null)
             {
                 return HttpNotFound();
@@ -71,7 +71,7 @@ namespace CVGenerator.Controllers
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
-            Curriculum curriculum = db.Curricula.Find(id);
+            CVGenerator.Models.Curriculum curriculum = db.Curricula.Find(id);
             if (curriculum == null)
             {
                 return HttpNotFound();
@@ -90,7 +90,7 @@ namespace CVGenerator.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editar(Curriculum curriculum)
+        public ActionResult Editar(CVGenerator.Models.Curriculum curriculum)
         {
          
             if (ModelState.IsValid)
@@ -112,7 +112,7 @@ namespace CVGenerator.Controllers
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
 
-            Curriculum curriculum = db.Curricula.Find(id);
+            CVGenerator.Models.Curriculum curriculum = db.Curricula.Find(id);
             if (curriculum == null)
             {
                 return HttpNotFound();
@@ -125,7 +125,7 @@ namespace CVGenerator.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Eliminar(int id)
         {
-            Curriculum curriculum = db.Curricula.Find(id);
+            CVGenerator.Models.Curriculum curriculum = db.Curricula.Find(id);
             db.Curricula.Remove(curriculum);
             db.SaveChanges();
             return RedirectToAction("Index");
