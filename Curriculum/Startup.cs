@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(Curriculum.Startup))]
-namespace Curriculum
+[assembly: OwinStartupAttribute(typeof(CVGenerator.Startup))]
+namespace CVGenerator
 {
     public partial class Startup
     {

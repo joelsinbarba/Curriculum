@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Curriculum.Models;
+using CVGenerator.Models;
 
-namespace Curriculum.Controllers
+namespace CVGenerator.Controllers
 {
     [Authorize]
     public class AccountController : Controller
