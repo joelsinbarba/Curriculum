@@ -6,10 +6,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CurriculumWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Curriculum Generator" Height="450" Width="800">
     <Grid>
-        <materialDesign:Card Padding="32" Margin="16">
-            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>
+        <Menu DockPanel.Dock="Top" Background="#FF2B3E4F">
+            <MenuItem Header="_Menu" Foreground="White">
+                <MenuItem Header="_Eliminar usuario" Click="MenuItem_Click"/>
+                <MenuItem Header="_Informacion de Github usuario" Click="MenuItem_Click_1"/>
+                <Separator />
+                <MenuItem Header="_Salir" />
+            </MenuItem>
+        </Menu>
+        <materialDesign:Card Padding="32" Margin="38,48,73,73" Background="#FF2B3E4F">
+            <Image Margin="-85,10,-64,-1" Source="currículum_generator.png" Stretch="Fill"/>
         </materialDesign:Card>
     </Grid>
 </Window>

@@ -13,10 +13,10 @@ namespace CurriculumWPF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CurriculumEntities : DbContext
+    public partial class CurriculumEntities1 : DbContext
     {
-        public CurriculumEntities()
-            : base("name=CurriculumEntities")
+        public CurriculumEntities1()
+            : base("name=CurriculumEntities1")
         {
         }
     
@@ -25,9 +25,9 @@ namespace CurriculumWPF
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<Curriculum> Curricula { get; set; }
         public virtual DbSet<Pai> Pais { get; set; }
         public virtual DbSet<Contacto> Contactoes { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
     }
 }
