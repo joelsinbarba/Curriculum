@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using Curriculum.Models;
+using CVGenerator.Models;
 
-namespace Curriculum
+namespace CVGenerator
 {
     public partial class Startup
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Curriculum.Models
+namespace CVGenerator.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
